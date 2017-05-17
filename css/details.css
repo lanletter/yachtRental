@@ -78,10 +78,14 @@
     font-size: 13px;
 }
 .yacht-handle img{
-    margin:0 10px 0 20px;
+    margin-right: 5px;
 }
 .yacht-handle a {
     color: #333333;
+    display:block;
+    float: left;
+    margin:0 10px;
+    margin-top: 7px;
 }
 .yacht-handle a:hover {
     color: #0a73b5;
@@ -350,6 +354,8 @@
     background: #ffffff;
     text-align: center;
 }
+.tb-price .bdright {border-right: 1px solid #f2f2f2;}
+.tb-price .bdbottom {border-bottom: 1px solid #f2f2f2;}
 
 .title-choose {
     height: 40px;
