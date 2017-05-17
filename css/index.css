@@ -569,10 +569,14 @@ header{
     padding:10px 30px;
 }
 .each-choose{
-
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
 }
+.each-choose a{  float: left;line-height: 28px;}
 .each-choose span{
-    display: inline-block;
+    display: block;
+    float: left;
     height: 28px;
     line-height: 30px;
     min-width: 88px;
@@ -582,15 +586,17 @@ header{
     text-align: center;
     font-size: 12px;
     color: #333;
+    cursor: pointer;
 }
 .each-choose input{
-    display: inline-block;
+    display: block;
+    float: left;
     height: 28px;
     line-height: 30px;
     width: 88px;
     border: 1px solid #e6e6e6;
     margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: -2px;
     text-align: center;
     font-size: 12px;
     color: #333;
@@ -602,6 +608,8 @@ header{
 .each-choose span.active{
     border:1px solid #0768a4;
 }
+
+
 .sure-price{
     display: inline-block;
     height: 28px;
@@ -609,23 +617,36 @@ header{
     width: 68px;
     border: 1px solid #ffcc00;
     margin-left: 10px;
-    margin-bottom: 5px;
     text-align: center;
     font-size: 12px;
     color: #ffcc00;
+    overflow: hidden;
 }
-.open-subject,.open-all{
-    display: inline-block;
+.open-subject{
+    position: absolute;
+    float: right;
     height: 28px;
     line-height: 29px;
     width: 74px;
     border: 1px solid #e6e6e6;
-    margin-left: 10px;
-    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-top: 4px;
     text-align: center;
     font-size: 12px;
     color: #333;
     background: #f9f9f9;
+}
+.open-all{
+    display: block;
+    margin: 0 auto;
+    height: 28px;
+    width: 90px;
+    line-height: 29px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    background: #f9fbfd;
 }
 .open-subject img,.open-all img{
     margin-left: 8px;
@@ -633,15 +654,19 @@ header{
 .open-all{
     background: #f9fbfd;
     width: 90px;
-    margin-left:0;
 }
+.show{display: block;}
+.show-no{display: none;}
+
 .subject-wrapper{
-    height: 35px;
+    height: 38px;
     overflow-y: hidden;
+    margin-bottom: 5px;
 }
 .subject-wrapper.opened{
     height: auto;
     overflow-y: auto;
+    margin-right: 10px;
 }
 .subject-wrapper.opened img{
     -webkit-transform: rotateZ(180deg);
@@ -657,33 +682,26 @@ header{
 .price-up {
     width: 0;
     height: 0;
-    border-width: 3px;
-    border-style: solid dashed dashed dashed;
-    border-color: transparent transparent #343e48 transparent;
-    margin-bottom: 3px;
-    display: inline-block;
-    /* position: absolute; */
-    /* top: 50%; */
-    margin-top: 0px;
-    /* left: 50%; */
-    /* margin-left: 14px; */
-    vertical-align: 2px;
-}
-.comment-sort .price-down{
-    margin-left: -6px;
+    border-bottom: 3px solid #343e48;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 4px solid #343e48\9;
+    border-left: 4px solid transparent\9;
+    border-right: 4px solid transparent\9;
+    position: absolute;
+    top:20px;
+    right: 5px;
+    right: 4px\9;
 }
 .price-down {
     width: 0;
     height: 0;
-    border-width: 3px;
-    border-style: solid dashed dashed dashed;
-    border-color: #343e48 transparent transparent transparent;
-    margin-bottom: 3px;
-    display: inline-block;
+    border-top: 3px solid #343e48;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
     position: absolute;
-    top: 50%;
-    margin-top: 1px;
-    margin-left: -6px;
+    top: 26px;
+    right: 5px;
 }
 .active .price-up.active{
     border-color: transparent transparent #0873b6 transparent;
@@ -722,6 +740,9 @@ header{
     cursor: pointer;
     border-bottom: 1px solid #e6e6e6;
     border-right:1px solid #e6e6e6;
+    display: block;
+    float: right;
+
 }
 .sort-wrapper .overflow-auto > div.right>span.active{
     background: #fff;
@@ -758,7 +779,7 @@ header{
     padding: 30px 0;
 }
 .product-wrapper{
-    overflow: auto;
+    overflow:hidden;
 }
 .product-each-r{
     width: 379px;
@@ -806,7 +827,7 @@ header{
 .product-detail{
     border-top:1px solid #e6e6e6;
     border-bottom:1px solid #e6e6e6;
-    overflow: auto;
+    overflow:hidden;
     padding:10px 0;
 }
 .product-each.no-margin-left{
@@ -860,6 +881,7 @@ header{
     font-weight: bold;
     font-size: 24px;
 }
+#allmap{width: 1200px;height: 714px;margin-bottom: 40px;}
 /**end list页面**/
 
 /***start 下单***/

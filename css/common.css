@@ -54,7 +54,7 @@ img{
     padding:0 10px;
 }
 .overflow-auto{
-    overflow: auto;
+    overflow:hidden;
 }
 .left{
     float: left;
@@ -132,3 +132,4 @@ body{
 .hrblue{border-top: 2px solid #0a73b5;height: 0px;width: 100%;margin: 0;padding: 0;}
 .hrgray{border-top: 1px solid #e5e6e8;height: 0px;width: 100%;margin: 0;padding: 0;}
 .clear{clear: both;}
+.border-top-blue{ border-top: 3px solid #0873b6;}
