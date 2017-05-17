@@ -11,15 +11,38 @@
 		<link href="css/details.css" rel="stylesheet">
 		<script src="js/jquery-1.9.min.js"></script>
 		<script src="js/mootools-1.3.2.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
 		<link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
 		<!--[if lte IE 8]>
-    <script src="js/selectivizr.js"></script>
-    <![endif]-->
-		<!--[if lt IE 9]>
-    <script src="js/css3-mediaqueries.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+		<script src="js/selectivizr.js"></script>
+		<![endif]-->
+			<!--[if lt IE 9]>
+		<script src="js/css3-mediaqueries.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			window.onload = function(){
+
+				var object = document.getElementById('box1')
+				function loadImg (data){
+					var i = 0;
+					setInterval(function(){
+						i++
+						if(i>data){
+							i=data
+						}
+						var imgLeft = -(i*44+(i*10))+'px'
+						object.style.backgroundPosition = imgLeft+'\t'+'0px'
+						object.innerHTML = i+'%';
+					},50)
+
+				}
+				loadImg(88)
+			}
+		</script>
 	</head>
 
 	<body>
@@ -107,7 +130,7 @@
 				<div class="yacht-name">
 					<p>海神号<span>Sea-stella46</span></p>
 					<div class="rate-num-wrapper">
-						<div id="star" class="star" style="width: 150px;"></div><span class="rate-num">9.8分<span>（969评论）</span></span>
+						<div id="star" class="star"></div><span class="rate-num">9.8分<span>（969评论）</span></span>
 					</div>
 					<hr class="hrgray"/>
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tbstyle">
@@ -125,40 +148,80 @@
 						</tr>
 					</table>
 					<hr class="hrgray"/>
+
 					<p class="yacht-detail-title">详细描述</p>
-					<p class="yacht-detail-txt">详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述详细描述</p>
+					<p class="yacht-detail-txt">豪华是Ocean Alexander游艇最基本的要求。每艘游艇不但经由至少300名人工以手工打造，其售后服务及保养更是创业界之先驱。Ocean Alexander提供一系列的游艇船型，全面配合任何尊客的需要。最高规格的制造过程、极致的奢华享受，以及卓越的技术革新绝对是世界级的标杆。</p>
 					<p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00元／小时</span>起</p>
 					<div class="yacht-handle">
 						<a href="#"><img src="img/small/collect.png" />收藏</a>
-						<a href="#"><img src="img/small/share.png" />分享</a>
-						<a href="#">新浪</a>
-						<a href="#">QQ</a>
-						<a href="#">豆瓣</a>
-						<a href="#">人人</a>
+						<a href="#"><img src="img/small/options.png" />分享</a>
+						<img src="img/small/social-pic.png"/>
 					</div>
 				</div>
 			</div>
 			<div class="clear"></div>
 			<div class="yacht-tab">
 				<ul>
-					<li><a href="yacht_details.html">游艇预定</a></li>
-					<li><a href="yacht_details2.html">游艇介绍</a></li>
-					<li><a href="yacht_details5.html">费用说明</a></li>
-					<li><a href="yacht_details4.html">预定须知</a></li>
-					<li><a href="yacht_details5.html" class="active">用户评论</a></li>
+					<li class="yacht-nav1"><a href="yacht_details1.html">游艇预定</a></li>
+					<li class="yacht-nav2"><a href="yacht_details2.html">游艇介绍</a></li>
+					<li class="yacht-nav3"><a href="yacht_details5.html">费用说明</a></li>
+					<li class="yacht-nav4"><a href="yacht_details4.html">预定须知</a></li>
+					<li class="yacht-nav5"><a href="yacht_details5.html" class="active">用户评论</a></li>
 				</ul>
 			</div>
 			<div class="yacht-detail-discus">
-				<p class="title-yacht">用户评论</p>
-				<div class="discus-textarea"><textarea></textarea></div>
-				<button class="btn-discus"></button>
+				<!--<p class="title-yacht">用户评论</p>-->
+				<!--<div class="discus-textarea"><textarea></textarea></div>-->
+				<!--<button class="btn-discus"></button>-->
+				<div class="yacht-review">
+					<p>用户评论</p>
+					<div class="percent-col">
+						<p class="satisfaction"><span>98%</span>的人认为此邮轮令人满意</p>
+						<ul class="example">
+							<li id="progress1">
+								<span class="ptext">满意</span>
+								<div class="pbar"></div>
+								<div class="percent"></div>
+							</li>
+							<li id="progress2">
+								<span class="ptext">一般</span>
+								<div class="pbar"></div>
+								<div class="percent"></div>
+							</li>
+							<li id="progress3">
+								<span class="ptext">不满意</span>
+								<div class="pbar"></div>
+								<div class="percent"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="line"></div>
+					<table border="0" cellspacing="0" cellpadding="0" class="percent-circle">
+						<tr>
+							<th><div id="box1"></div></th>
+							<th><div id="box2"></div></th>
+							<th><div id="box3"></div></th>
+							<th><div id="box4"></div></th>
+						</tr>
+						<tr>
+							<td>游艇品质</td>
+							<td>艇上服务</td>
+							<td>附加套餐</td>
+							<td>港口环境</td>
+						</tr>
+					</table>
+				</div>
 				<p class="all-discus-title">全部评论（<span>3</span>）</p>
 				<ul class="discus-list">
 					<li class="discus-li">
-						<a href="#" class="discus-user"><img /></a>
+						<a href="#" class="discus-user">
+							<img src="img/avatars/avatarhover.png" class="avatar-h"/>
+							<img src="img/avatars/avatar1.png" />
+						</a>
 						<div class="discus-s">
-							<p class="discus-p">评论评论评论评论评论评论评论评论</p>
-							<p class="discus-p">评论评论评论评论评论评论评论评论</p>
+							<div id="star2" class="star"></div><span class="rate-num"><span>5分</span></span>
+							<p class="discus-p">非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+							<p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
 							<ul class="discus-imgs">
 								<li><img src="img/s1.png"></li>
 								<li><img src="img/s1.png"></li>
@@ -166,36 +229,68 @@
 								<li><img src="img/s1.png"></li>
 							</ul><br/>
 							<p class="discus-handle">
-								<span>时间</span>
-								<a>点赞</a><span>800</span>
-								<a>回复</a>
+								<span class="time">2017/09/09 11:00</span>
+								<span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
 							</p>
 						</div>
 					</li>
-					<li>
-						<a><img /></a>
-						<div>
-							<p>评论</p>
-							<p>
-								<span>时间</span>
-								<a>点赞</a><span>800</span>
-								<a>回复</a>
+					<li class="discus-li">
+						<a href="#" class="discus-user">
+							<img src="img/avatars/avatarhover.png" class="avatar-h"/>
+							<img src="img/avatars/avatar1.png" />
+						</a>
+						<div class="discus-s">
+							<div id="star3" class="star"></div><span class="rate-num"><span>5分</span></span>
+							<p class="discus-p">非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+							<p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+							<p class="discus-handle">
+								<span class="time">2017/09/09 11:00</span>
+								<span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
 							</p>
-							<textarea></textarea>
+							<div class="triangle"></div>
+							<div class="discus-reply">
+								<p class="discus-reply-p">非常感谢您的支持！</p>
+								<p class="discus-handle">
+									<span class="time">2017/09/09 11:00</span>
+								</p>
+							</div>
 						</div>
 					</li>
-					<li>
-						<a><img /></a>
-						<div>
-							<p>评论</p>
-							<p>
-								<span>时间</span>
-								<a>点赞</a><span>800</span>
-								<a>回复</a>
+					<li class="discus-li" style="border: none;">
+						<a href="#" class="discus-user">
+							<img src="img/avatars/avatarhover.png" class="avatar-h"/>
+							<img src="img/avatars/avatar1.png" />
+						</a>
+						<div class="discus-s">
+							<div id="star4" class="star"></div><span class="rate-num"><span>5分</span></span>
+							<p class="discus-p">非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+							<p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+							<p class="discus-handle">
+								<span class="time">2017/09/09 11:00</span>
+								<span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
 							</p>
 						</div>
 					</li>
 				</ul>
+			</div>
+			<div class="hrblue"></div>
+			<p class="hot-yacht">热门游艇</p>
+			<div class="product-wrapper">
+				<div class="product-each-r">
+					<img src="img/smallpic.png"/>
+					<div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
+				<div class="product-each-r">
+					<img src="img/smallpic.png"/>
+					<div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
+				<div class="product-each0">
+					<img src="img/smallpic.png"/>
+					<div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
 			</div>
 		</div>
 
@@ -299,6 +394,21 @@
 	<script type="text/javascript" language="javascript">
 		$(document).ready(function(){
 			$('#star').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star2').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star3').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star4').raty({
 				halfShow: false,
 				score: 4.9,
 				readOnly: true

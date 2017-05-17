@@ -141,15 +141,15 @@
 			<div class="clear"></div>
 			<div class="yacht-tab">
 				<ul>
-					<li><a href="yacht_details.html" class="active">游艇预定</a></li>
-					<li><a href="yacht_details2.html">游艇介绍</a></li>
-					<li><a href="yacht_details3.html">费用说明</a></li>
-					<li><a href="yacht_details4.html">预定须知</a></li>
-					<li><a href="yacht_details5.html">用户评论</a></li>
+					<li class="yacht-nav1"><a href="yacht_details1.html" class="active">游艇预定</a></li>
+					<li class="yacht-nav2"><a href="yacht_details2.html">游艇介绍</a></li>
+					<li class="yacht-nav3"><a href="yacht_details5.html">费用说明</a></li>
+					<li class="yacht-nav4"><a href="yacht_details4.html">预定须知</a></li>
+					<li class="yacht-nav5"><a href="yacht_details5.html" >用户评论</a></li>
 				</ul>
 			</div>
 			<div class="yacht-detail-book">
-				<p class="title-book">价格列表</p>
+				<p class="title-yacht">价格列表</p>
 				<table border="0" cellspacing="1" cellpadding="0" bgcolor="#f2f2f2" class="tb-price">
 					<tr>
 						<th>时间段</th>
@@ -174,11 +174,11 @@
 				<hr class="hrgray"/>
 				<div class="choose-time">
 					<div class="choose-time-left">
-						<p class="title-book">选择预定日期</p>
+						<p class="title-yacht">选择预定日期</p>
 						<div>
-							<p class="title-choose">选择日期</p>
+							<p class="title-choose"><img src="img/small/date.png"/>选择日期</p>
 							<input type="datetime" class="input-time" value="2017/09/09(周二)"/>
-							<p class="title-choose">选择时间</p>
+							<p class="title-choose"><img src="img/small/time.png"/>选择时间</p>
 							<div class="choose-time-cells">
 								<p class="cell-little">
 									<a class="cell-grey-little"></a><span>不可预定</span>
@@ -255,7 +255,16 @@
 						</div>
 						<p class="yacht-detail-txt">已选择预定2017年09月09日<span>1.5</span>小时</p>
 						<p class="yacht-price">预计：<span class="price-yellow">¥<span>6000</span>.00元／小时</span></p>
-						<div class="yacht-rent-notice"></div>
+						<div class="yacht-rent-notice">
+							<p class="title">游艇租赁相关事项：</p>
+							<p class="list">
+								1、游艇根据海事局规定，乘客不得超过10人；<br/>
+								2、预订后1小时全额支付费用，订单生成有效；<br/>
+								3、提前24小时取消订单的，扣除25%租赁费用作为手续费，返还剩余费用；<br/>
+								4、提前6个小时（夜间时段2100-0800不计入内）不足24小时者，收取50%的租赁费用，返还剩余费用；不足6个小时（夜间时段2100-0800不计入内）者不得取消；<br/>
+								5、两档租赁业务之间需至少间隔半个小时；
+							</p>
+						</div>
 						<p class="yacht-detail-txt"><input type="checkbox"/>我已阅读并同意<a href="#">《游艇租赁协议》</a></p>
 						<button type="submit" class="yacht-booking"></button>
 

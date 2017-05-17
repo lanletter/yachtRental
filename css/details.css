@@ -55,7 +55,7 @@
 .yacht-detail-txt input{margin-right: 5px;}
 
 .yacht-price {
-    margin: 20px 0;
+    margin: 40px 0;
     font-size: 18px;
     color: #333333;
 }
@@ -627,9 +627,9 @@
 }
 
 /*讨论模块*/
-
+.yacht-detail-discus{margin: 20px 0;}
 .yacht-review{margin-top:20px;height: 210px;border-bottom: 2px solid #e5e6e8;}
-.yacht-review{font-size: 18px;color: #333333;}
+.yacht-review p{font-size: 18px;color: #333333;}
 .percent-col{margin:20px 0 0 16px;}
 .satisfaction{font-size: 14px;color: #666666;}
 .satisfaction span{font-size: 20px; color: #fbcb09;}
@@ -649,7 +649,7 @@
 			color: #ffcc00;
 			font-size: 15px;
 			font-weight: bold;
-			background: url(../img/small/investjd.png);
+			background: url(../img/investjd.png);
 		}
 .percent-circle tr td{text-align: center;line-height: 40px;font-size: 14px;color: #666666;}
 .btn-discus {
@@ -723,7 +723,7 @@
 }
 
 .discus-p {
-    margin: 5px 0;
+    margin: 10px 0;
     line-height: 20px;
     font-size: 13px;
     color: #666666;
@@ -760,6 +760,7 @@
     width: 100%;
     color: #999999;
     overflow: hidden;
+    font-size: 12px;
 }
 
 .discus-handle .time {
@@ -771,10 +772,6 @@
     margin-left: 20px;
 }
 
-.discus-handle .reply {
-    float: right;
-    margin-left: 20px;
-}
 .discus-handle img {
     display:inline ;
 }
@@ -785,6 +782,21 @@
 
 .discus-handle a:hover {
     color: #0777b6;
+}
+
+.discus-reply{
+    padding:10px;
+    width: 100%;
+    background: #efeff0;
+}
+.discus-reply-p{line-height: 26px;color: #666666;font-size: 13px;}
+.triangle{
+    width: 0;
+    height: 0;
+    margin: 5px 0 0 30px;
+    border-bottom: 8px solid #efeff0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
 }
 
 .replydiv {
