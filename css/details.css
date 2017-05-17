@@ -257,67 +257,66 @@
     color: #999999;
 }
 
-.yacht-nav1 a{
+.yacht-nav1{
     background: #ffffff url(../img/small/yacht-nav-book.png) 70px center no-repeat;
     border-right: 1px solid #f1f4fa;
 }
-.yacht-nav1 a:hover{
+.yacht-nav1:hover{
     background: #0874b5 url(../img/small/yacht-nav-book2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav1 .active{
+.current .yacht-nav1{
     background: #0874b5 url(../img/small/yacht-nav-book2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav2 a{
+.yacht-nav2{
     background: #ffffff url(../img/small/yacht-nav-detail.png) 70px center no-repeat;
     border-right: 1px solid #f1f4fa;
 }
-.yacht-nav2 a:hover{
+.yacht-nav2:hover{
     background: #0874b5 url(../img/small/yacht-nav-detail2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav2 .active{
+.current .yacht-nav2{
     background: #0874b5 url(../img/small/yacht-nav-detail2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav3 a{
+.yacht-nav3{
     background: #ffffff url(../img/small/yacht-nav-reminders.png) 70px center no-repeat;
     border-right: 1px solid #f1f4fa;
 }
-.yacht-nav3 a:hover{
+.yacht-nav3:hover{
     background: #0874b5 url(../img/small/yacht-nav-reminders2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav3 .active{
+.current .yacht-nav3{
     background: #0874b5 url(../img/small/yacht-nav-reminders2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav4 a{
+.yacht-nav4{
     background: #ffffff url(../img/small/yacht-nav-notice.png) 70px center no-repeat;
     border-right: 1px solid #f1f4fa;
 }
-.yacht-nav4 a:hover{
+.yacht-nav4:hover{
     background: #0874b5 url(../img/small/yacht-nav-notice2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav4 .active{
+.current .yacht-nav4{
     background: #0874b5 url(../img/small/yacht-nav-notice2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav5 a{
+.yacht-nav5{
     background: #ffffff url(../img/small/yacht-nav-discus.png) 70px center no-repeat;
     width: 210px;
 }
-.yacht-nav5 a:hover{
+.yacht-nav5:hover{
     background: #0874b5 url(../img/small/yacht-nav-discus2.png) 70px center no-repeat;
     color: #ffffff;
 }
-.yacht-nav5 .active{
+.current .yacht-nav5{
     background: #0874b5 url(../img/small/yacht-nav-discus2.png) 70px center no-repeat;
     color: #ffffff;
 }
-
 /*预定模块*/
 
 .yacht-detail-book {

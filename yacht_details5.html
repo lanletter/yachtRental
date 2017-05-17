@@ -26,21 +26,28 @@
 		<script type="text/javascript">
 			window.onload = function(){
 
-				var object = document.getElementById('box1')
-				function loadImg (data){
-					var i = 0;
-					setInterval(function(){
-						i++
-						if(i>data){
-							i=data
-						}
-						var imgLeft = -(i*44+(i*10))+'px'
-						object.style.backgroundPosition = imgLeft+'\t'+'0px'
-						object.innerHTML = i+'%';
-					},50)
+				var obj = document.getElementsByClassName('box')
+				function loadImg (data,k){
+						var i = 0;
+						setInterval(function(){
+							object=obj[k];
+							i++
+							if(i>data){
+								i=data
+							}
+							var imgLeft = -(i*44+(i*10))+'px'
+							object.style.backgroundPosition = imgLeft+'\t'+'0px'
+							object.innerHTML = i+'%';
+
+
+						},50)
 
 				}
-				loadImg(88)
+				//第一个参数代表百分比,第二个参数代表评论项目的次序
+				loadImg(88,0)
+				loadImg(28,1)
+				loadImg(68,2)
+				loadImg(78,3)
 			}
 		</script>
 	</head>
@@ -160,6 +167,7 @@
 				</div>
 			</div>
 			<div class="clear"></div>
+
 			<div class="yacht-tab">
 				<ul>
 					<li class="yacht-nav1"><a href="yacht_details1.html">游艇预定</a></li>
@@ -169,6 +177,7 @@
 					<li class="yacht-nav5"><a href="yacht_details5.html" class="active">用户评论</a></li>
 				</ul>
 			</div>
+
 			<div class="yacht-detail-discus">
 				<!--<p class="title-yacht">用户评论</p>-->
 				<!--<div class="discus-textarea"><textarea></textarea></div>-->
@@ -198,10 +207,10 @@
 					<div class="line"></div>
 					<table border="0" cellspacing="0" cellpadding="0" class="percent-circle">
 						<tr>
-							<th><div id="box1"></div></th>
-							<th><div id="box2"></div></th>
-							<th><div id="box3"></div></th>
-							<th><div id="box4"></div></th>
+							<th><div class="box" id="box1"></div></th>
+							<th><div class="box" id="box2"></div></th>
+							<th><div class="box" id="box3"></div></th>
+							<th><div class="box" id="box4"></div></th>
 						</tr>
 						<tr>
 							<td>游艇品质</td>
@@ -392,6 +401,7 @@
 	<script src="js/jquery.raty.js"></script>
 	<script type="text/javascript" src="js/query.js"></script>
 	<script type="text/javascript" language="javascript">
+		/*星星打分*/
 		$(document).ready(function(){
 			$('#star').raty({
 				halfShow: false,
@@ -420,8 +430,9 @@
 				}
 			});
 		});
-	</script>
-	<script type="text/javascript" language="javascript">
+
+
+		//图片轮播
 		$(document).ready(function() {
 			var mySwiper = new Swiper('.featured', {
 				autoplay: 3000,
