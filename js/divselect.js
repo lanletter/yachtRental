@@ -1,7 +1,7 @@
 $(function(){
     $.divselect("#selectdiv1","#inputselect1");
     $.divselect("#selectdiv2","#inputselect2");
-    $.divselect("#selectdock1","#inputdock1");
+    $.divselect("#selectdiv3","#inputselect3");
     $.divselect("#selectdock2","#inputdock2");
     $.divselect("#selectdock3","#inputdock3");
 });
