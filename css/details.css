@@ -1251,6 +1251,13 @@
 	font-size: 13px;
 	color: #333333;
 }
+.theme-detail-txt2 {
+	height: 50px;
+	 margin: 20px 0;
+	 line-height: 24px;
+	 font-size: 13px;
+	 color: #333333;
+ }
 
 .theme-include-tag {
 	margin: 10px 0 15px 0;
