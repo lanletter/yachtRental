@@ -997,4 +997,23 @@ header{
     height: 24px;
     overflow: hidden;
 }
+.select-dock{overflow: hidden;}
+.select-dock ul li{}
+.select-dock span{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+    font-size: 16px;
+    display: block;
+}
+.select-dock cite{
+    display:block;
+    cursor:pointer;
+}
+.select-dock ul{width:158px;border: 1px solid #cccccc;background: #ffffff; position:absolute; z-index:20000;margin-left: -15px; margin-top:-1px; display:none;}
+.select-dock ul li{height:24px; line-height:24px;}
+.select-dock ul li a{display:block; height:24px; color:#d1e1f1; text-decoration:none; padding-left:10px; padding-right:10px;}
+.select-dock ul li a:hover{background-color:#ffffff;}
+.select-dock cite{font-style: normal;}
+
 /***end 下单***/

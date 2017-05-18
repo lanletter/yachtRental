@@ -1319,3 +1319,7 @@
 	padding-left: 20px;
 	background: url("../img/small/ic_users.png") 0 center no-repeat;
 }
+
+/*订单模块*/
+.order-title{font-size: 20px;color: #333333;}
+.order-brief{width: 100%;overflow: hidden;}
