@@ -10,6 +10,8 @@
     <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
     <script src="js/jquery-1.9.min.js"></script>
     <script src="js/mootools-1.3.2.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=W1a6ywZFkybedSCHadpRbkz4w5HYfG4R" type="text/javascript" charset="utf-8"></script>
+
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
     <![endif]-->
@@ -43,11 +45,12 @@
                 </div>
                 <div class="index-tab-list">
                     <div class="overflow-auto">
-                        <a class="active">首页</a>
-                        <a>游艇租赁</a>
-                        <a>主题租赁</a>
-                        <a>媒体中心</a>
                         <a>关于我们</a>
+                        <a>媒体中心</a>
+                        <a href="train.html">驾驶培训</a>
+                        <a href="theme_type.html" class="active">主题租赁</a>
+                        <a href="yacht_list.html">游艇租赁</a>
+                        <a href="home.html">首页</a>
                     </div>
                 </div>
             </div>
@@ -182,114 +185,64 @@
             </div>
         </div>
     </div>
+    <div class="baidumap">
+        <div id="allmap"></div>
+        <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+        <script type="text/javascript">
+            var map = new BMap.Map("allmap");
+            map.centerAndZoom("上海", 12); // 初始化地图,设置中心点坐标和地图级别
+            map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+            map.setCurrentCity("上海"); // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+            function G(id) {
+                return document.getElementById(id);
+            }
+            var ac = new BMap.Autocomplete( //建立一个自动完成的对象
+                    {
+                        "input": "suggestId",
+                        "location": map
+                    });
 
+            ac.addEventListener("onhighlight", function(e) { //鼠标放在下拉列表上的事件
+                var str = "";
+                var _value = e.fromitem.value;
+                var value = "";
+                if(e.fromitem.index > -1) {
+                    value = _value.province + _value.city + _value.district + _value.street + _value.business;
+                }
+                str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
 
-    <div class="product-list">
-        <div class="container">
-            <div class="product-wrapper">
-                <div class="product-each no-margin-left">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each no-margin-left">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each no-margin-left">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="product-each">
-                    <img src="img/smallpic.png"/>
-                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-                    <div class="product-detail">
-                        <span><span>所属城市</span><br/>上海</span>
-                        <span><span>乘坐人数</span><br/>10人</span>
-                        <span><span>游艇长度</span><br/>30-60英尺</span>
-                        <span class="last-span"><span>产地</span><br/>意大利</span>
-                    </div>
-                    <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div id="pageTool" class="pageWrapper"></div>
-        </div>
+                value = "";
+                if(e.toitem.index > -1) {
+                    _value = e.toitem.value;
+                    value = _value.province + _value.city + _value.district + _value.street + _value.business;
+                }
+                str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+                G("searchResultPanel").innerHTML = str;
+            });
+
+            var myValue;
+            ac.addEventListener("onconfirm", function(e) { //鼠标点击下拉列表后的事件
+                var _value = e.item.value;
+                myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+                G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+                setPlace();
+            });
+
+            function setPlace() {
+                map.clearOverlays(); //清除地图上所有覆盖物
+                function myFun() {
+                    var pp = local.getResults().getPoi(0).point; //获取第一个智能搜索的结果
+                    map.centerAndZoom(pp, 18);
+                    map.addOverlay(new BMap.Marker(pp)); //添加标注
+                }
+                var local = new BMap.LocalSearch(map, { //智能搜索
+                    onSearchComplete: myFun
+                });
+                local.search(myValue);
+            }
+        </script>
     </div>
     <div class="clear"></div>
     <div class="bottom-img">
@@ -383,7 +336,6 @@
             </div>
 
         </div>
-    </div>
     </div>
 </body>
 <script src="basic/swiper/js/idangerous.swiper.min.js"></script>

@@ -3,234 +3,178 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>主题列表</title>
+		<title>驾驶列表</title>
 		<meta name="viewport" charset="width=device-width,initial-scale=1">
-		<link href="css/common.css" rel="stylesheet" />
-		<link href="css/index.css" rel="stylesheet" />
-		<link href="css/paging.css" rel="stylesheet" />
-		<link href="css/details.css" rel="stylesheet">
+		<link href="css/common.css" rel="stylesheet"/>
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="css/paging.css" rel="stylesheet"/>
+		<link href="css/details.css" rel="stylesheet"/>
+		<link>
 		<link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
 		<script src="js/jquery-1.9.min.js"></script>
 		<script src="js/mootools-1.3.2.js"></script>
 		<!--[if lte IE 8]>
-    <script src="js/selectivizr.js"></script>
-    <![endif]-->
+		<script src="js/selectivizr.js"></script>
+		<![endif]-->
 		<!--[if lt IE 9]>
-    <script src="js/css3-mediaqueries.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+		<script src="js/css3-mediaqueries.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 	</head>
-
 	<body>
-		<header>
+	<header>
+		<div class="container">
+			<div class="overflow-auto">
+				<div class="left">
+					欢迎进入上海游艇O2O平台！
+				</div>
+				<div class="right">
+					<a class="login-btn">登录</a><a class="register-btn">注册</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="list-header-back">
+		<div class="index-tab">
 			<div class="container">
+				<img src="img/logo.png" class="logo-img"/>
+				<div class="index-input">
+					<span>游艇 ></span>
+					<input type="text" placeholder="请输入查询的内容"/>
+					<img src="img/search.png"/>
+				</div>
+				<div class="index-tab-list">
+					<div class="overflow-auto">
+						<a>关于我们</a>
+						<a>媒体中心</a>
+						<a href="train.html" class="active">驾驶培训</a>
+						<a href="theme_type.html">主题租赁</a>
+						<a href="yacht_list.html">游艇租赁</a>
+						<a href="home.html">首页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="list-header">
+			<div class="list-header-msg-wrapper">
+				<div class="container">
+					<div class="list-header-msg">
+						汇集上海地区及全国各地最完备的游艇租赁资源，保障游艇资质齐全，服务规范，为您提供纯正的游艇驾乘感受。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="select-wrapper">
+		<div class="container">
+			<div class="now-position">当前位置：首页 > 驾驶培训 > <span>游艇驾驶培训</span></div>
+			<div class="select-name"><img src="img/small/ship2.png" />游艇驾驶培训</div>
+		</div>
+	</div>
+	<div class="sort-wrapper">
+		<div class="container">
+			<div class="border-top-blue">
 				<div class="overflow-auto">
-					<div class="left">
-						欢迎进入上海游艇O2O平台！
+					<div class="sort-title">排序：</div>
+					<div class="active all" value="allSort">综合</div>
+					<div value="saleSort" class="up-down">
+						<span>销量</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
+					</div>
+					<div value="priceSort" class="priceSort">
+						<span>价格</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
+					</div>
+					<div value="goodCommentSort" class="comment-sort">
+						<span>好评率</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
 					</div>
 					<div class="right">
-						<a class="login-btn">登录</a>
-						<a class="register-btn">注册</a>
+						<span class="all-total">共<span class="special_color"> 494 </span>个商品</span>
+						<span class="first-input">
+                            <input type="text" placeholder="在结果内搜索..."/> <img src="img/small/black-search.png" />
+                        </span>
 					</div>
 				</div>
-			</div>
-		</header>
-		<div class="">
-			<div class="index-tab">
-				<div class="container">
-					<img src="img/logo.png" class="logo-img" />
-					<div class="index-input">
-						<span>游艇 ></span>
-						<input type="text" placeholder="请输入查询的内容" />
-						<img src="img/search.png" />
-					</div>
-					<div class="index-tab-list">
-						<div class="overflow-auto">
-							<a class="active">首页</a>
-							<a>游艇租赁</a>
-							<a>主题租赁</a>
-							<a>媒体中心</a>
-							<a>关于我们</a>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
-		<div class="select-wrapper">
+	</div>
+		<div class="theme-list mp30 ">
 			<div class="container">
-				<div class="now-position">当前位置：首页 > 主题租赁 > <span>婚纱拍摄</span></div>
-
-                <div class="theme-type">
-                    <img class="pic-big" src="img/images/theme-photo2.png">
-                    <div class="theme-brief">
-                        <p class="theme-brief-title"><img src="img/small/shoot.png">婚纱拍摄</p>
-                        <div class="hrgray"></div>
-                        <div class="theme-brief-txt">
-                            游艇婚纱摄影成为时尚，源于年轻人对海洋生活的向往近些年来，越来越多的新人身披婚纱在游艇上摆POSE，蓝天、碧海、新人、游艇成为海边城市的另一道亮丽风景。新人们游艇作为人生的一个重要纪念地拍摄婚纱，他们在为自己留下永生难忘美好记忆的同时，也感受着游艇生活与众不同的魅力。 自推出游艇婚纱拍摄以来，受到了广大蜜月旅游的情侣们的热捧，租艘游艇，出海拍婚纱成了大多数蜜月旅游的情侣们到海边城市的又一时尚之选！
-                        </div>
-                        <p class="theme-brief-num">
-                            <img src="img/small/grid.png">
-                            共有<span>8</span>个套餐
-                        </p>
-                    </div>
-                </div>
-
-                <div class="title-yacht">主题筛选</div>
-				<div class="choose-wrapper">
-					<div class="has-choosed">
-						您已选择：
-						<span id="has-choosed-subject" class="no-border"></span>
-						<span id="has-choosed-city" class="no-border"></span>
-						<span id="has-choosed-size" class="no-border"></span>
-						<span id="has-choosed-price" class="no-border"></span>
-						<span id="has-choosed-type" class="no-border"></span>
-					</div>
-					<div class="choose-items">
-						<div class="subject-wrapper">
-							<div class="each-choose" id="subject">
-								<a>主题：</a>
-								<span class="all active">全部</span>
-								<span>婚纱拍摄</span>
-								<span>商务宴请</span>
-								<span>朋友聚会</span>
-								<span>求婚表白</span>
-								<span>商务洽谈</span>
-								<span>家庭/亲子游览</span>
-								<span>轰趴派对</span>
-								<span>品牌活动</span>
-								<span>下午茶/就餐</span>
-								<span>test1</span>
-								<span>test2</span>
-								<span>test3</span>
-							</div>
-							<a id="open" class="open-subject" onclick="openSubject()">展开<img src="img/small/down.png" /></a>
-						</div>
-						<div class="each-choose" id="city">
-							<a>城市：</a>
-							<span class="all active">全部</span>
-							<span>上海</span>
-							<span>三亚</span>
-						</div>
-						<div class="each-choose" id="size">
-							<a>尺寸：</a>
-							<span class="all active">全部</span>
-							<span>0-30英尺</span>
-							<span>30-60英尺</span>
-							<span>60英尺以上</span>
-						</div>
-						<div class="each-choose" id="price">
-							<a>价格：</a>
-							<span class="all active">全部</span>
-							<span>0-3000</span>
-							<span>3000-6000</span>
-							<span>6000以上</span>
-							<input type="text" placeholder="输入最低价" id="price1" />
-							<a>~</a> <input type="text" placeholder="输入最高价" id="price2" />
-							<a id="sure-price" class="sure-price" onclick="changePrice()">确定</a>
-						</div>
-						<div class="each-choose each-choose-add show-no" id="type2">
-							<a>类型：</a>
-							<span class="all active">全部</span>
-							<span>机动艇</span>
-							<span>帆艇</span>
-							<span>钓鱼艇</span>
-							<span>运动艇</span>
-							<span>商务艇</span>
-							<span>其它</span>
-						</div>
-						<div class="each-choose each-choose-add show-no" id="type3">
-							<a>类型：</a>
-							<span class="all active">全部</span>
-							<span>机动艇</span>
-							<span>帆艇</span>
-							<span>钓鱼艇</span>
-							<span>运动艇</span>
-							<span>商务艇</span>
-							<span>其它</span>
-						</div>
-					</div>
-				</div>
-				<div id="open-all" class="open-all" onclick="openAll()">展开<img src="img/small/down.png" /></div>
-
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="hrblue"></div>
-		</div>
-		<div class="theme-list">
-			<div class="container">
-				<p class="title-yacht">选择预定时间</p>
 				<div class="product-wrapper">
 					<div class="product-each2">
-						<div class="time-remind">4小时</div>
                         <img src="img/images/theme-photo3.png" class="pic-big"/>
                         <div class="theme-booking">
-                            <div class="theme-title">婚纱拍摄 </div>
-                            <p class="theme-cycles">主题周期<span>2017/09/09~2017/12/12</span></p>
-                            <div class="hrgray"></div>
-                            <p class="theme-detail-txt">大海与蓝天共同为你们作证，船长亲自见证新人的誓言，美丽的自然风景是您最佳的婚纱照背景，为您的婚礼之旅增添姿彩。</p>
-                            <p class="theme-include-tag"><span>水果拼盘一份</span><span>红酒一瓶</span></p>
+                            <div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+                            <p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
                             <p class="theme-information">
                                 <span class="price">￥ <span class="font-bold">7800</span>.00</span>
-                                <span class="old-price">原价：¥12，000</span>
-                                <a class="booking"><img src="img/small/reserve.png" />预定</a>
-                                <span class="booked">已有1200人预订</span>
+                                <a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+                                <span class="booked">已有1200人报名</span>
                             </p>
                         </div>
 					</div>
-                    <div class="product-each2">
-                        <div class="time-remind">4小时</div>
-                        <img src="img/images/theme-photo3.png" class="pic-big"/>
-                        <div class="theme-booking">
-                            <div class="theme-title">婚纱拍摄 </div>
-                            <p class="theme-cycles">主题周期<span>2017/09/09~2017/12/12</span></p>
-                            <div class="hrgray"></div>
-                            <p class="theme-detail-txt">大海与蓝天共同为你们作证，船长亲自见证新人的誓言，美丽的自然风景是您最佳的婚纱照背景，为您的婚礼之旅增添姿彩。</p>
-                            <p class="theme-include-tag"><span>水果拼盘一份</span><span>红酒一瓶</span></p>
-                            <p class="theme-information">
-                                <span class="price">￥ <span class="font-bold">7800</span>.00</span>
-                                <span class="old-price">原价：¥12，000</span>
-                                <a class="booking"><img src="img/small/reserve.png" />预定</a>
-                                <span class="booked">已有1200人预订</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="product-each2">
-                        <div class="time-remind">4小时</div>
-                        <img src="img/images/theme-photo3.png" class="pic-big"/>
-                        <div class="theme-booking">
-                            <div class="theme-title">婚纱拍摄 </div>
-                            <p class="theme-cycles">主题周期<span>2017/09/09~2017/12/12</span></p>
-                            <div class="hrgray"></div>
-                            <p class="theme-detail-txt">大海与蓝天共同为你们作证，船长亲自见证新人的誓言，美丽的自然风景是您最佳的婚纱照背景，为您的婚礼之旅增添姿彩。</p>
-                            <p class="theme-include-tag"><span>水果拼盘一份</span><span>红酒一瓶</span></p>
-                            <p class="theme-information">
-                                <span class="price">￥ <span class="font-bold">7800</span>.00</span>
-                                <span class="old-price">原价：¥12，000</span>
-                                <a class="booking"><img src="img/small/reserve.png" />预定</a>
-                                <span class="booked">已有1200人预订</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="product-each2">
-                        <div class="time-remind">4小时</div>
-                        <img src="img/images/theme-photo3.png" class="pic-big"/>
-                        <div class="theme-booking">
-                            <div class="theme-title">婚纱拍摄 </div>
-                            <p class="theme-cycles">主题周期<span>2017/09/09~2017/12/12</span></p>
-                            <div class="hrgray"></div>
-                            <p class="theme-detail-txt">大海与蓝天共同为你们作证，船长亲自见证新人的誓言，美丽的自然风景是您最佳的婚纱照背景，为您的婚礼之旅增添姿彩。</p>
-                            <p class="theme-include-tag"><span>水果拼盘一份</span><span>红酒一瓶</span></p>
-                            <p class="theme-information">
-                                <span class="price">￥ <span class="font-bold">7800</span>.00</span>
-                                <span class="old-price">原价：¥12，000</span>
-                                <a class="booking"><img src="img/small/reserve.png" />预定</a>
-                                <span class="booked">已有1200人预订</span>
-                            </p>
-                        </div>
-                    </div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star2" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star3" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star4" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
 					<div class="clear"></div>
 				</div>
 				<div id="pageTool" class="pageWrapper"></div>
@@ -333,10 +277,39 @@
 	</body>
 	<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
 	<script type="text/javascript" src="js/query.js"></script>
+	<script src="js/jquery.raty.js"></script>
 	<script type="text/javascript" src="js/paging.js"></script>
 	<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
 
 	<script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			$('#star').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star2').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star3').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star4').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('.contact-info-wrapper .contact-info-detail').click(function(){
+				if(!$(this).hasClass('add')){
+					$('.contact-info-wrapper .contact-info-detail').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		});
 		$(document).ready(function() {
 			var mySwiper = new Swiper('.featured', {
 				autoplay: 3000,

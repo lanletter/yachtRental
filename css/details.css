@@ -1027,17 +1027,21 @@
 }
 
 .theme-brief-num img {
+    float: left;
     margin-right: 5px;
-    margin-top: -2px;
+    margin-top: 10px;
 }
 
-.theme-brief-num span {
+.theme-brief-num .num {
+    display: block;
+    float: left;
+     color: #666666;
+ }
+.theme-brief-num .num span {
     color: #0865c5;
 }
-
 .theme-brief-num .booking {
     float: right;
-    right: 0px;
     display: block;
     width: 100px;
     height: 35px;
@@ -1045,7 +1049,6 @@
     border: 1px solid #ffcc00;
     color: #ffcc00;
     line-height: 35px;
-    margin-bottom: 10px;
 }
 
 .theme-time {
