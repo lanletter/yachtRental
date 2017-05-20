@@ -95,6 +95,11 @@ a{
     margin: 0 auto;
     overflow: hidden;
 }
+.content3{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #ccc;
 }
