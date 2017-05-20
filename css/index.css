@@ -1907,11 +1907,11 @@ header {
     display: none;
 }
 
-#leftsead li a.qrcode .hides {
-    display: none;
+#leftsead .qrcode  {
+    display: block;
     position: absolute;
-    right: 299px;
-    top: 0px;
+    right: 69px;
+    top: -18px;
 }
 
 #leftsead li a span {
@@ -1923,7 +1923,8 @@ header {
     font-weight: bold;
     text-align: left;
     padding-left: 12px;
-    margin-right: 5px;
+    position: absolute;
+    right: 69px;
     background: #0873b6;
     color: #ffffff;
 }
