@@ -77,21 +77,23 @@ a{
     position: relative;
     overflow: hidden;
 }
+.container2{
+     width: 1200px;
+     padding:0 15px;
+     position: relative;
+ }
 .content{
     position: relative;
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 20px;\0
+    margin-bottom: 20px;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-    .content{
-        position: relative;
-        width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
+.content2{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #ccc;

@@ -1,5 +1,6 @@
 $(function(){
 	$.divselect("#selectdiv1","#inputselect1");
+	$.divselect("#selectdiv2","#inputselect2");
 });
 
 jQuery.divselect = function(divselectid,inputselectid) {

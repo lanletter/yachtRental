@@ -1,4 +1,5 @@
 $(function(){
+    $.divselect("#index-input-select","#index-input-select2");
     $.divselect("#selectdiv1","#inputselect1");
     $.divselect("#selectdiv2","#inputselect2");
     $.divselect("#selectdiv3","#inputselect3");
