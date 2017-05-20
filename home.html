@@ -10,7 +10,6 @@
     <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
     <script src="js/jquery-1.9.min.js"></script>
     <script src="js/mootools-1.3.2.js"></script>
-    <script src="js/jquery.js" ></script>
     <script src="js/divselect.js"></script>
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
@@ -101,61 +100,99 @@
 
         <ul>
 
-            <li><a href="http://www.jq22.com/"><img src="images/foot03/ll01.png" width="131" height="49" class="hides"/><img src="images/foot03/l01.png" width="47" height="49" class="shows" /></a></li>
+            <li>
+                <a href="#">
+                    <div class="hides">
+                        <img src="images/foot03/rr01.png" width="64" height="64"/>
+                        <span>400-878-6707</span>
+                    </div>
+                    <div class="shows">
+                        <img src="images/foot03/r01.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
 
-            <li><a href="http://www.jq22.com/"><img src="images/foot03/ll03.png" width="131" height="49"  class="hides"/><img src="images/foot03/l03.png" width="47" height="49" class="shows" /></a></li>
+            <li>
+                <a href="#">
+                    <div class="hides">
+                        <img src="images/foot03/rr02.png" width="64" height="64"/>
+                        <span>4008786707</span>
+                    </div>
+                    <div class="shows">
+                        <img src="images/foot03/r02.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
 
-            <li><a class="youhui"><img src="images/foot03/l02.png" width="47" height="49" class="shows" /><img src="images/foot03/youhui.png" width="145" height="343" class="hides" usemap="#taklhtml"/><map name="taklhtml"><area shape="rect" coords="26,273,115,300 " href="http://www.jq22.com/" /></map></a></li>
+            <li>
+                <a class="qrcode">
+                    <div class="shows">
+                        <img src="images/foot03/rr03.png" width="64" height="64"/>
+                    </div>
+                    <div class="hides">
+                        <img src="images/foot03/qrcode.png" width="100" height="100" usemap="#taklhtml"/>
+                    </div>
 
-            <li><a href="tencent://message/?uin=800027897&Site=test315.nesky.cn&Menu=yes"><img src="images/foot03/ll04.png" width="131" height="49" class="hides"/><img src="images/foot03/l04.png" width="47" height="49" class="shows" /></a></li>
+                </a>
+            </li>
 
-            <li><a href="http://www.jq22.com/"><img src="images/foot03/ll05.png" width="131" height="49" class="hides"/><img src="images/foot03/l05.png" width="47" height="49" class="shows" /></a></li>
-
-            <li><a id="top_btn"><img src="images/foot03/ll06.png" width="131" height="49" class="hides"/><img src="images/foot03/l06.png" width="47" height="49" class="shows" /></a></li>
+            <li>
+                <a id="top_btn">
+                    <div class="hides">
+                        <img src="images/foot03/r04.png" width="64" height="64"/>
+                    </div>
+                    <div class="shows">
+                        <img src="images/foot03/r04.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
 
         </ul>
 
     </div>
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function () {
 
-            $("#leftsead a").hover(function(){
 
-                if($(this).prop("className")=="youhui"){
-                    alert("111");
+            $("#leftsead a").hover(function () {
 
-                    $(this).children("img.hides").show();
+                if ($(this).prop("className") == "qrcode") {
 
-                }else{
-                    alert("222");
+                    $(this).children("div.hides").show();
 
-                    $(this).children("img.hides").show();
+                } else {
 
-                    $(this).children("img.shows").hide();
+                    $(this).children("div.hides").show();
 
-                    $(this).children("img.hides").animate({marginRight:'0px'},'slow');
+                    $(this).children("div.shows").hide();
+
+                    $(this).children("div.hides").animate({marginRight: '0px'}, 'slow');
 
                 }
 
-            },function(){
+            }, function () {
 
-                if($(this).prop("className")=="youhui"){
+                if ($(this).prop("className") == "qrcode") {
 
-                    $(this).children("img.hides").hide('slow');
+                    $(this).children("div.hides").hide('slow');
 
-                }else{
+                } else {
 
-                    $(this).children("img.hides").animate({marginRight:'-143px'},'slow',function(){$(this).hide();$(this).next("img.shows").show();});
+                    $(this).children("div.hides").animate({marginRight: '-143px'}, 'slow', function () {
+                        $(this).hide();
+                        $(this).next("div.shows").show();
+                    });
 
                 }
 
             });
 
 
-
-            $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
-
+            $("#top_btn").click(function () {
+                if (scroll == "off") return;
+                $("html,body").animate({scrollTop: 0}, 600);
+            });
 
 
         });

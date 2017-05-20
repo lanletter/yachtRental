@@ -1863,18 +1863,67 @@ header {
 /***end 下单***/
 
 /*右侧固定导航栏*/
-#leftsead{width:131px;height:143px;position:fixed;top:258px;right:0px;z-index: 9999;}
+#leftsead {
+    width: 230px;
+    height: 143px;
+    position: fixed;
+    top: 230px;
+    right: 0px;
+    z-index: 9999;
+}
 
-*html #leftsead{margin-top:258px;position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+* html #leftsead {
+    margin-top: 258px;
+    position: absolute;
+    top: expression(eval(document.documentElement.scrollTop));
+}
 
-#leftsead li{width:131px;height:60px;}
+#leftsead li {
+    width: 230px;
+    height: 64px;
+    margin-bottom: 3px;
+}
 
-#leftsead li img{float:right;}
+#leftsead li img {
+    float: right;
+}
 
-#leftsead li a{height:49px;float:right;display:block;min-width:47px;max-width:131px;}
+#leftsead li a {
+    height: 64px;
+    float: right;
+    display: block;
+    min-width: 64px;
+    max-width: 230px;
+}
 
-#leftsead li a .shows{display:block;}
+#leftsead li a .shows {
+    display: block;
+}
 
-#leftsead li a .hides{margin-right:-143px;cursor:pointer;cursor:hand;}
+#leftsead li a .hides {
+    margin-right: -230px;
+    cursor: pointer;
+    cursor: hand;
+    display: none;
+}
 
-#leftsead li a.youhui .hides{display:none;position:absolute;right:190px;top:2px;}
+#leftsead li a.qrcode .hides {
+    display: none;
+    position: absolute;
+    right: 299px;
+    top: 0px;
+}
+
+#leftsead li a span {
+    display: block;
+    width: 150px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 12px;
+    margin-right: 5px;
+    background: #0873b6;
+    color: #ffffff;
+}
