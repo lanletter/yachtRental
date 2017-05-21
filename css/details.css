@@ -270,6 +270,27 @@
     color: #333333;
     font-size: 18px;
 }
+.train-tab {
+    width: 100%;
+    height: 54px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.train-tab ul li {
+    float: left;
+}
+
+.train-tab ul li a {
+    padding-left: 30px;
+    display: block;
+    height: 54px;
+    width: 240px;
+    text-align: center;
+    line-height: 54px;
+    color: #333333;
+    font-size: 18px;
+}
 
 .yacht-nav1 {
     background: #ffffff url(../img/small/yacht-nav-book.png) 60px center no-repeat;
@@ -784,6 +805,7 @@
 }
 
 .percent-circle div {
+    display: block;
     width: 44px;
     height: 44px;
     line-height: 44px;
@@ -792,6 +814,7 @@
     font-size: 15px;
     font-weight: bold;
     background: url(../img/investjd.png);
+    overflow: hidden;
 }
 
 .percent-circle tr td {

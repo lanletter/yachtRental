@@ -100,6 +100,11 @@ a{
     width: 1200px;
     margin: 0 auto;
 }
+.content4{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #ccc;
 }
