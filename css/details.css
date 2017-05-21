@@ -8,7 +8,7 @@
 }
 
 .yacht-name {
-    float: left;
+    float: right;
     padding: 20px;
     height: 580px;
     width: 477px;
@@ -106,7 +106,7 @@
 /*轮播图 start*/
 
 /* tFocus 大的幻灯 */
-#tFocus{width:683px;height:580px;overflow:hidden;float: left;}
+#tFocus{width:683px;height:580px;overflow:hidden;float: right;}
 .ban{background: #f1f4fa; width:683px; height:580px; position:relative; overflow:hidden;}
 .ban2{width:683px; height:480px; position:relative; overflow:hidden;}
 .ban2 ul{ position:absolute; left:0; top:0;}
@@ -122,8 +122,8 @@
 .num ul li.on img{height:86px;}
 .prev_btn1{display: none; width:16px; text-align:center; height:18px; margin-top:40px; margin-right:20px; cursor:pointer; float:left;}
 .next_btn1{ display: none; width:16px; text-align:center; height:18px; margin-top:40px;cursor:pointer;float:right;}
-.prev1{ position:absolute; top:220px; left:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
-.next1{ position:absolute; top:220px; right:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
+.prev1{ position:absolute; top:220px; left:20px; width:28px; height:51px;z-index:9999;cursor:pointer;}
+.next1{ position:absolute; top:220px; right:20px; width:28px; height:51px;z-index:9999;cursor:pointer;}
 .mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:absolute; left:0; top:0; display:none;}
 .pop_up{ width:500px; height:500px; padding:10px; background:#fff; position:fixed; -position:absolute; left:50%; top:50%; margin-left:-255px; margin-top:-255px; display:none; z-index:99;}
 .pop_up_xx{ width:40px; height:40px; position:absolute; top:-40px; right:0; cursor:pointer;}
@@ -131,8 +131,12 @@
 .pop_up2{ width:500px; height:500px; position:relative; overflow:hidden; float:left;}
 .pop_up2 ul{ position:absolute; left:0; top:0;}
 .pop_up2 ul li{ width:500px; height:500px; float:left;}
+/*图片放大镜样式*/
+.jqzoom{float:left;border:none;position:relative;padding:0px;cursor:pointer;margin:0px;display:block;overflow:hidden;}
+.zoomdiv{z-index:9999;position:fixed;top:0px;left:0px;width:517px;height:580px;background:#ffffff;border:1px solid #cccccc;display:none;overflow: hidden;}
+.jqZoomPup{overflow:hidden;z-index:10;visibility:hidden;position:absolute;top:0;left:0;width:200px!important;height:200px!important;border:1px solid #aaaaaa;background:#ffffff /*url(../images/zoom.png) 50% center no-repeat*/;opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;filter: alpha(Opacity=50);}
 
-
+/*评论区图片*/
 .ban-p{width: 1125px;margin-bottom:20px;overflow: hidden;float: left;}
 .num-p{ height:70px;overflow:hidden; width:100%; position:relative;float:left;}
 .num-p ul{ float: left;height: 70px;  overflow: hidden;}
@@ -149,146 +153,6 @@
 .pop_up2-p ul li{ width:480px; height:480px; float:left;}
 .pop_up2-p ul li img{ width:480px; height:480px;}
 
-
-#slider {
-    width: 683px;
-    height: 580px;
-    float: left;
-    overflow: hidden;
-}
-
-.slider_box {
-    margin: 0px auto;
-    width: 683px;
-    height: 580px;
-    overflow: hidden;
-    position: relative;
-}
-
-.silder_tip {
-    top: 0px;
-    width: 92px;
-    height: 92px;
-    right: 0px;
-    text-indent: -999px;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-}
-
-.silder_con {
-    height: 480px;
-    overflow: hidden;
-    position: absolute;
-}
-
-.silder_panel {
-    background: rgb(17, 17, 17);
-    width: 683px;
-    height: 480px;
-    overflow: hidden;
-    float: left;
-    position: relative;
-}
-
-.silder_panel img {
-    width: 690px;
-    height: 480px;
-    overflow: hidden;
-    display: block;
-}
-
-.silder_intro {
-    padding: 0px 40px 0px 0px;
-    width: 210px;
-    height: 480px;
-    color: rgb(153, 153, 153);
-    line-height: 20px;
-    overflow: hidden;
-}
-
-.silder_intro ul {
-    height: 60px;
-    overflow: hidden;
-}
-
-.silder_intro li {
-    height: 20px;
-    color: rgb(120, 120, 120);
-    overflow: hidden;
-}
-
-.silder_nav {
-    margin: 0px auto;
-    width: 690px;
-    height: 98px;
-    bottom: 0px;
-    overflow: hidden;
-    position: absolute;
-}
-
-.silder_nav li {
-    margin-right: 2px;
-    padding: 0px;
-    border: 3px solid #ffffff;
-    float: left;
-}
-
-.silder_nav li.current {
-    border: 3px solid #0865c5;
-}
-
-.silder_nav li {
-    width: 129px;
-    height: 92px;
-    overflow: hidden;
-    display: block;
-}
-
-.silder_nav img {
-    width: 129px;
-    height: 92px;
-    overflow: hidden;
-    display: block;
-}
-
-.slider_box a.prev {
-    background: url("../img/silder_btn.gif") no-repeat;
-    margin: 85px 0px 0px;
-    width: 45px;
-    height: 100px;
-    text-indent: -999px;
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    cursor: pointer;
-}
-
-.slider_box a.next {
-    background: url("../img/silder_btn.gif") no-repeat;
-    margin: 85px 0px 0px;
-    width: 45px;
-    height: 100px;
-    text-indent: -999px;
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    cursor: pointer;
-}
-
-.slider_box a.prev {
-    left: 0px;
-}
-
-.slider_box a.next {
-    background-position: right 0px;
-    right: 0px;
-}
-
-.silderBox {
-    height: 8px;
-    line-height: 8px;
-}
 
 /*轮播图 end*/
 
