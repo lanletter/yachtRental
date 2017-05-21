@@ -268,7 +268,7 @@
                 </div>
             </div>
             <div class="train-detail-w400">
-                <div class="overflow-auto p30">
+                <form class="overflow-auto p30">
 
                     <p class="apply-title">
                         <img src="img/small/house.png"/>主办单位
@@ -287,7 +287,7 @@
                     <div class="contact-info">
                         <p class="remark-title">申请人姓名</p>
                     </div>
-                    <input type="text" class="apply-input">
+                    <input type="text" class="apply-input" id="name" onfocus="nameFocus()" onblur="nameBlur()">
 
                     <p class="bill-title">申请人性别</p>
                     <div class="overflow-auto">
@@ -306,14 +306,15 @@
                     <div class="contact-info">
                         <p class="remark-title">身份证号</p>
                     </div>
-                    <input type="text" class="apply-input">
+                    <input type="text" class="apply-input" id="idnum" onfocus="idnumFocus()" onblur="idnumBlur()">
 
                     <div class="contact-info">
                         <p class="remark-title">手机号</p>
                     </div>
-                    <input type="text" class="apply-input">
+                    <input type="text" class="apply-input" id="phone" onfocus="phoneFocus()" onblur="phoneBlur()">
                     <div class="clear"></div>
-                    <a href="train_order.html" class="apply-button">立即申请</a>
+                    <button class="apply-button" value="Submit" type="submit">立即申请</button>
+                    </form>
                 </div>
             </div>
         </div>

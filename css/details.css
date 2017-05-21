@@ -246,14 +246,19 @@
 
 /*详情页tab切换开始*/
 
+.block{ display:block;}
+.none{ display:none;}
 .yacht-tab {
     width: 1200px;
-    height: 54px;
+    height: 100%;
     margin: 20px 0;
     overflow: hidden;
 }
-
+.yacht-tab ul{
+    overflow: hidden;
+}
 .yacht-tab ul li {
+    height: 54px;
     float: left;
 }
 
@@ -369,6 +374,7 @@
 
 .yacht-detail-book {
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .title-yacht {
